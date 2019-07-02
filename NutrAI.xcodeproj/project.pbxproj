@@ -13,7 +13,7 @@
 		795C551B22CBA5690043DC14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795C551A22CBA5690043DC14 /* Assets.xcassets */; };
 		795C551E22CBA5690043DC14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795C551C22CBA5690043DC14 /* LaunchScreen.storyboard */; };
 		795C552922CBA56A0043DC14 /* NutrAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C552822CBA56A0043DC14 /* NutrAITests.swift */; };
-		795C553722CBA6300043DC14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553622CBA6300043DC14 /* ViewController.swift */; };
+		795C553722CBA6300043DC14 /* MealsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553622CBA6300043DC14 /* MealsListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		795C552422CBA56A0043DC14 /* NutrAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutrAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		795C552822CBA56A0043DC14 /* NutrAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrAITests.swift; sourceTree = "<group>"; };
 		795C552A22CBA56A0043DC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		795C553622CBA6300043DC14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		795C553622CBA6300043DC14 /* MealsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				795C551522CBA5690043DC14 /* CustomTabBarController.swift */,
-				795C553622CBA6300043DC14 /* ViewController.swift */,
+				795C553622CBA6300043DC14 /* MealsListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				795C553722CBA6300043DC14 /* ViewController.swift in Sources */,
+				795C553722CBA6300043DC14 /* MealsListController.swift in Sources */,
 				795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */,
 				795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */,
 			);
