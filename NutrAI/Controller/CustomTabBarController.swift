@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController {
 
+class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setComponentsInTab()
@@ -24,6 +24,7 @@ class CustomTabBarController: UITabBarController {
     }
     fileprivate func createNav(viewController: UIViewController, title: String, imageNamed: String) -> UINavigationController {
         let navVc = UINavigationController(rootViewController: viewController)
+        viewController.view.backgroundColor = .white
         navVc.navigationBar.barTintColor = .white
         navVc.navigationBar.prefersLargeTitles = true
         viewController.navigationItem.title = title
