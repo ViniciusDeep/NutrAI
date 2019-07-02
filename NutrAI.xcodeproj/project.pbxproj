@@ -14,6 +14,15 @@
 		795C551E22CBA5690043DC14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795C551C22CBA5690043DC14 /* LaunchScreen.storyboard */; };
 		795C552922CBA56A0043DC14 /* NutrAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C552822CBA56A0043DC14 /* NutrAITests.swift */; };
 		795C553722CBA6300043DC14 /* MealsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553622CBA6300043DC14 /* MealsListController.swift */; };
+		795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553822CBCD700043DC14 /* MealsListCell.swift */; };
+		79E269B422CBD517000C62D0 /* UIViewComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269B322CBD517000C62D0 /* UIViewComponents+Extension.swift */; };
+		79E269B622CBD9FA000C62D0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269B522CBD9FA000C62D0 /* UIView+Extension.swift */; };
+		79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269B822CBDC72000C62D0 /* ConfigurableView.swift */; };
+		79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269BA22CBDD19000C62D0 /* Reusable.swift */; };
+		79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269BC22CBDD7D000C62D0 /* UITableView+Reusable.swift */; };
+		79E269BF22CBDF12000C62D0 /* MealsListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269BE22CBDF12000C62D0 /* MealsListHeader.swift */; };
+		79E269C122CBE5B6000C62D0 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269C022CBE5B6000C62D0 /* Meal.swift */; };
+		79E269C322CBEAAB000C62D0 /* MealsStatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269C222CBEAAB000C62D0 /* MealsStatsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		795C552822CBA56A0043DC14 /* NutrAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrAITests.swift; sourceTree = "<group>"; };
 		795C552A22CBA56A0043DC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795C553622CBA6300043DC14 /* MealsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListController.swift; sourceTree = "<group>"; };
+		795C553822CBCD700043DC14 /* MealsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListCell.swift; sourceTree = "<group>"; };
+		79E269B322CBD517000C62D0 /* UIViewComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewComponents+Extension.swift"; sourceTree = "<group>"; };
+		79E269B522CBD9FA000C62D0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		79E269B822CBDC72000C62D0 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		79E269BA22CBDD19000C62D0 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		79E269BC22CBDD7D000C62D0 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		79E269BE22CBDF12000C62D0 /* MealsListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListHeader.swift; sourceTree = "<group>"; };
+		79E269C022CBE5B6000C62D0 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		79E269C222CBEAAB000C62D0 /* MealsStatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsStatsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,8 @@
 		795C551222CBA5690043DC14 /* NutrAI */ = {
 			isa = PBXGroup;
 			children = (
+				79E269B722CBDC65000C62D0 /* Protocol */,
+				795C553A22CBD4CD0043DC14 /* Extension */,
 				795C553522CBA57C0043DC14 /* Controller */,
 				795C553422CBA5770043DC14 /* Model */,
 				795C553322CBA5700043DC14 /* View */,
@@ -103,6 +123,8 @@
 		795C553322CBA5700043DC14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				795C553822CBCD700043DC14 /* MealsListCell.swift */,
+				79E269BE22CBDF12000C62D0 /* MealsListHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +132,7 @@
 		795C553422CBA5770043DC14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				79E269C022CBE5B6000C62D0 /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,8 +142,28 @@
 			children = (
 				795C551522CBA5690043DC14 /* CustomTabBarController.swift */,
 				795C553622CBA6300043DC14 /* MealsListController.swift */,
+				79E269C222CBEAAB000C62D0 /* MealsStatsController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		795C553A22CBD4CD0043DC14 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79E269B322CBD517000C62D0 /* UIViewComponents+Extension.swift */,
+				79E269B522CBD9FA000C62D0 /* UIView+Extension.swift */,
+				79E269BC22CBDD7D000C62D0 /* UITableView+Reusable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		79E269B722CBDC65000C62D0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				79E269B822CBDC72000C62D0 /* ConfigurableView.swift */,
+				79E269BA22CBDD19000C62D0 /* Reusable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +267,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E269B622CBD9FA000C62D0 /* UIView+Extension.swift in Sources */,
+				79E269BF22CBDF12000C62D0 /* MealsListHeader.swift in Sources */,
+				795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */,
+				79E269B422CBD517000C62D0 /* UIViewComponents+Extension.swift in Sources */,
+				79E269C122CBE5B6000C62D0 /* Meal.swift in Sources */,
 				795C553722CBA6300043DC14 /* MealsListController.swift in Sources */,
+				79E269C322CBEAAB000C62D0 /* MealsStatsController.swift in Sources */,
+				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
+				79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */,
+				79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */,
 				795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */,
 				795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */,
 			);

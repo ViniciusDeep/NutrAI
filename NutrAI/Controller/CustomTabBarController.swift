@@ -18,12 +18,12 @@ class CustomTabBarController: UITabBarController {
 
     fileprivate func setComponentsInTab() {
         viewControllers = [
-            createNav(viewController: MealsListController(), title: "NutrAI", imageNamed: "NutrAI"),
+            createNav(viewController: MealsListController(), title: "NutrAI", imageNamed: "tab1"),
+            createNav(viewController: MealsStatsController(), title: "Stats", imageNamed: "tab2"),
         ]
     }
     fileprivate func createNav(viewController: UIViewController, title: String, imageNamed: String) -> UINavigationController {
         let navVc = UINavigationController(rootViewController: viewController)
-        viewController.view.backgroundColor =  .white
         navVc.navigationBar.barTintColor = .white
         navVc.navigationBar.prefersLargeTitles = true
         viewController.navigationItem.title = title
