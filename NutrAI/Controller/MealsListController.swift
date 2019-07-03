@@ -10,10 +10,11 @@ import UIKit
 
 class MealsListController: UITableViewController {
     
+    let schedules = [Schedule(name: "BreakFast", imageNamed: "breakfast"),Schedule(name: "Lunch", imageNamed: "lunch"),Schedule(name: "Dinner", imageNamed: "dinner")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
         setupTableView()
     }
 }
@@ -23,11 +24,12 @@ extension MealsListController {
         tableView.tableFooterView = UIView()
         tableView.register(cellType: MealsListCell.self)
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
     }
-    
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MealsListHeader()
+        header.schedule = schedules[section]
         return header
     }
     
@@ -36,7 +38,7 @@ extension MealsListController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return schedules.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

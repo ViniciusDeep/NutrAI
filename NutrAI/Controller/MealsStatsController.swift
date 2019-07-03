@@ -9,9 +9,12 @@
 import UIKit
 import Charts
 
+fileprivate protocol ConfigurableChart: class {
+    func updateChartData()
+}
+
 class MealsStatsController: UIViewController, ConfigurableView {
-    var pieChart: PieChartView!
-    
+    var pieChart = PieChartView(translatesAutoresizingMaskIntoConstraints: false)
     
     var healthyEntry = PieChartDataEntry(value: 0)
     var unHealthyEntry = PieChartDataEntry(value: 0)
@@ -20,14 +23,26 @@ class MealsStatsController: UIViewController, ConfigurableView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        pieChart = PieChartView()
         buildViewHierarchy()
         setupConstraints()
         updateChartData()
     }
+    func buildViewHierarchy() {
+        view.addSubview(pieChart)
+    }
     
-    fileprivate func updateChartData() {
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            pieChart.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            pieChart.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            pieChart.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            pieChart.topAnchor.constraint(equalTo: self.view.topAnchor),
+            ])
+    }
+}
+
+extension MealsStatsController: ConfigurableChart {
+        fileprivate func updateChartData() {
         pieChart.noDataText = "You dont have dates, set your meals"
         pieChart.chartDescription?.text = "Health life"
         healthyEntry.label = "Health"
@@ -41,16 +56,5 @@ class MealsStatsController: UIViewController, ConfigurableView {
         chartDataSet.colors = colors
         pieChart.data = chartData
     }
-    
-    func buildViewHierarchy() {
-        view.addSubview(pieChart)
-    }
-    
-    func setupConstraints() {
-        pieChart.fillSuperview()
-    }
-    
-    
-    
     
 }

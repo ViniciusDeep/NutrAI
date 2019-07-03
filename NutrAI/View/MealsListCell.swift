@@ -10,10 +10,17 @@ import UIKit
 
 class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
     
+    var meal: Meal! {
+        didSet {
+            imageMeal.image =  UIImage(named: meal.imageUrl)
+            nameMeal.text = meal.name
+            calorieMeal.text = "\(meal.calorie)"
+        }
+    }
     
     lazy var imageMeal = UIImageView().roundedImage(nameImage: "meal")
     
-    lazy var nameMeal = UILabel(text: "Crip Beef Tendon", font:  UIFont.boldSystemFont(ofSize: 16), textColor: nil)
+    lazy var nameMeal = UILabel(text: "Crip Beef Tendon", font:   UIFont.init(name: "Futura", size: 16), textColor: .black)
     
     lazy var calorieMeal = UILabel(text: "325cl", font: UIFont.init(name: "Futura", size: 10), textColor: .gray)
     

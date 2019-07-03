@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7925806522CC600700415C72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7925806422CC600700415C72 /* User.swift */; };
 		795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C551322CBA5690043DC14 /* AppDelegate.swift */; };
 		795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C551522CBA5690043DC14 /* CustomTabBarController.swift */; };
 		795C551B22CBA5690043DC14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795C551A22CBA5690043DC14 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		795C552922CBA56A0043DC14 /* NutrAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C552822CBA56A0043DC14 /* NutrAITests.swift */; };
 		795C553722CBA6300043DC14 /* MealsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553622CBA6300043DC14 /* MealsListController.swift */; };
 		795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553822CBCD700043DC14 /* MealsListCell.swift */; };
+		7969A5B722CC5B71004BE151 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7969A5B622CC5B71004BE151 /* Schedule.swift */; };
 		79E269B422CBD517000C62D0 /* UIViewComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269B322CBD517000C62D0 /* UIViewComponents+Extension.swift */; };
 		79E269B622CBD9FA000C62D0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269B522CBD9FA000C62D0 /* UIView+Extension.swift */; };
 		79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E269B822CBDC72000C62D0 /* ConfigurableView.swift */; };
@@ -40,6 +42,7 @@
 /* Begin PBXFileReference section */
 		77F075A6599E6A8E84C6DA23 /* Pods-NutrAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutrAI.release.xcconfig"; path = "Target Support Files/Pods-NutrAI/Pods-NutrAI.release.xcconfig"; sourceTree = "<group>"; };
 		789E347E14E5E6CE624BB020 /* Pods_NutrAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutrAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7925806422CC600700415C72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		795C551022CBA5690043DC14 /* NutrAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutrAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		795C551322CBA5690043DC14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		795C551522CBA5690043DC14 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		795C552A22CBA56A0043DC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795C553622CBA6300043DC14 /* MealsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListController.swift; sourceTree = "<group>"; };
 		795C553822CBCD700043DC14 /* MealsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListCell.swift; sourceTree = "<group>"; };
+		7969A5B622CC5B71004BE151 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		79E269B322CBD517000C62D0 /* UIViewComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewComponents+Extension.swift"; sourceTree = "<group>"; };
 		79E269B522CBD9FA000C62D0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		79E269B822CBDC72000C62D0 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				79E269C022CBE5B6000C62D0 /* Meal.swift */,
+				7969A5B622CC5B71004BE151 /* Schedule.swift */,
+				7925806422CC600700415C72 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,10 +379,12 @@
 				795C553722CBA6300043DC14 /* MealsListController.swift in Sources */,
 				79E269C322CBEAAB000C62D0 /* MealsStatsController.swift in Sources */,
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
+				7925806522CC600700415C72 /* User.swift in Sources */,
 				79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */,
 				79E269C522CBF0CD000C62D0 /* Constraints+Extension.swift in Sources */,
 				79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */,
 				795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */,
+				7969A5B722CC5B71004BE151 /* Schedule.swift in Sources */,
 				795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

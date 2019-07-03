@@ -10,8 +10,16 @@ import UIKit
 
 
 class MealsListHeader: UIView, ConfigurableView {
-    lazy var nameSection = UILabel(text: "Breakfast", font: UIFont.init(name: "Futura", size: 16), textColor: .black)
     
+    var schedule: Schedule! {
+        didSet {
+            nameSection.text = schedule.name
+            iconSection.image = UIImage(named: schedule.imageNamed)
+        }
+    }
+    
+    
+    lazy var nameSection = UILabel(text: "Breakfast", font: UIFont.init(name: "Futura", size: 16), textColor: .black)
     
     lazy var iconSection: UIImageView = {
        let imageView = UIImageView(image: UIImage(named: "toaster"))

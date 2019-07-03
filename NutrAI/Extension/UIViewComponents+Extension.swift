@@ -8,8 +8,15 @@
 
 import UIKit
 
+
+extension UIView {
+    convenience init(translatesAutoresizingMaskIntoConstraints: Bool) {
+        self.init()
+        self.translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMaskIntoConstraints
+    }
+}
+
 extension UIImageView {
-    
     func roundedImage(nameImage: String) -> UIImageView {
         let image = UIImageView(image: UIImage(named: nameImage))
         image.translatesAutoresizingMaskIntoConstraints = false
