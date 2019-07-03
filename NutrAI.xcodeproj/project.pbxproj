@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B92CDA22CCE2C9007B51ED /* NetworkService.swift */; };
 		7925806522CC600700415C72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7925806422CC600700415C72 /* User.swift */; };
 		795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C551322CBA5690043DC14 /* AppDelegate.swift */; };
 		795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C551522CBA5690043DC14 /* CustomTabBarController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77B92CDA22CCE2C9007B51ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		77F075A6599E6A8E84C6DA23 /* Pods-NutrAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutrAI.release.xcconfig"; path = "Target Support Files/Pods-NutrAI/Pods-NutrAI.release.xcconfig"; sourceTree = "<group>"; };
 		789E347E14E5E6CE624BB020 /* Pods_NutrAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutrAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7925806422CC600700415C72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77B92CDE22CCE812007B51ED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				77B92CDA22CCE2C9007B51ED /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		795C550722CBA5690043DC14 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		795C551222CBA5690043DC14 /* NutrAI */ = {
 			isa = PBXGroup;
 			children = (
+				77B92CDE22CCE812007B51ED /* Service */,
 				79E269B722CBDC65000C62D0 /* Protocol */,
 				795C553A22CBD4CD0043DC14 /* Extension */,
 				795C553522CBA57C0043DC14 /* Controller */,
@@ -381,6 +392,7 @@
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
 				7925806522CC600700415C72 /* User.swift in Sources */,
 				79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */,
+				77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */,
 				79E269C522CBF0CD000C62D0 /* Constraints+Extension.swift in Sources */,
 				79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */,
 				795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */,
