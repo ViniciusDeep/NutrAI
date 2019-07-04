@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MealIdentifierViewDelegate: class {
-    func addButtonDidClick()
+    func addButtonDidClick(meal: Meal)
     func cancelButtonDidClick()
     func photoImageViewDidClick()
 }
@@ -20,6 +20,7 @@ class MealIdentifierView: UIView, ConfigurableView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .lightGray
+        imageView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(photoImageViewClicked))
         imageView.addGestureRecognizer(tapGesture)
         return imageView
@@ -126,5 +127,9 @@ extension MealIdentifierView {
     
     @objc func photoImageViewClicked(_ gesture: UITapGestureRecognizer) {
         delegate?.photoImageViewDidClick()
+    }
+    
+    func setMealImage(_ image: UIImage) {
+        mealImageView.image = image
     }
 }

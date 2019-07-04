@@ -14,8 +14,17 @@ class MealsListController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMealButtonClicked))
         setupTableView()
+    }
+}
+
+// MARK: - Actions
+
+extension MealsListController {
+    @objc func addMealButtonClicked(_ sender: Any) {
+        let mealIdentifierVC = MealIdentifierController()
+        present(mealIdentifierVC, animated: true)
     }
 }
 

@@ -12,9 +12,8 @@ class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
     
     var meal: Meal! {
         didSet {
-            imageMeal.image =  UIImage(named: meal.imageUrl)
+            imageMeal.image =  UIImage(data: meal.imageData)
             nameMeal.text = meal.name
-            calorieMeal.text = "\(meal.calorie)"
         }
     }
     

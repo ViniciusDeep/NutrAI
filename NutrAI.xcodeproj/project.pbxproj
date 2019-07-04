@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775F514522CDFD2000ACF4C0 /* Food101.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 775F514422CDFD2000ACF4C0 /* Food101.mlmodel */; };
 		775F514722CE000500ACF4C0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514622CE000500ACF4C0 /* CustomButton.swift */; };
 		775F514922CE003A00ACF4C0 /* UIButton+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514822CE003A00ACF4C0 /* UIButton+Animate.swift */; };
 		775F514B22CE00C400ACF4C0 /* MealIdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514A22CE00C400ACF4C0 /* MealIdentifierView.swift */; };
 		775F514D22CE082400ACF4C0 /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514C22CE082400ACF4C0 /* HasCustomView.swift */; };
 		775F514F22CE086800ACF4C0 /* MealIdentifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514E22CE086800ACF4C0 /* MealIdentifierController.swift */; };
+		775F515522CE24A800ACF4C0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F515422CE24A800ACF4C0 /* Alert.swift */; };
 		77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B92CDA22CCE2C9007B51ED /* NetworkService.swift */; };
+		77B92CE122CCF490007B51ED /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B92CE022CCF490007B51ED /* CoreMLHelper.swift */; };
 		7925806522CC600700415C72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7925806422CC600700415C72 /* User.swift */; };
 		7947250822CD1F4600524EA5 /* TipsMealsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947250722CD1F4600524EA5 /* TipsMealsController.swift */; };
 		7947250A22CD209000524EA5 /* TheMealDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947250922CD209000524EA5 /* TheMealDBManager.swift */; };
@@ -51,12 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		775F514422CDFD2000ACF4C0 /* Food101.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Food101.mlmodel; path = ../Food101.mlmodel; sourceTree = "<group>"; };
 		775F514622CE000500ACF4C0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		775F514822CE003A00ACF4C0 /* UIButton+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Animate.swift"; sourceTree = "<group>"; };
 		775F514A22CE00C400ACF4C0 /* MealIdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIdentifierView.swift; sourceTree = "<group>"; };
 		775F514C22CE082400ACF4C0 /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
 		775F514E22CE086800ACF4C0 /* MealIdentifierController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIdentifierController.swift; sourceTree = "<group>"; };
+		775F515422CE24A800ACF4C0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		77B92CDA22CCE2C9007B51ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		77B92CE022CCF490007B51ED /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
 		77F075A6599E6A8E84C6DA23 /* Pods-NutrAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutrAI.release.xcconfig"; path = "Target Support Files/Pods-NutrAI/Pods-NutrAI.release.xcconfig"; sourceTree = "<group>"; };
 		789E347E14E5E6CE624BB020 /* Pods_NutrAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutrAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7925806422CC600700415C72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -121,9 +127,18 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		77B92CDF22CCF485007B51ED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				77B92CE022CCF490007B51ED /* CoreMLHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		795C550722CBA5690043DC14 = {
 			isa = PBXGroup;
 			children = (
+				775F514422CDFD2000ACF4C0 /* Food101.mlmodel */,
 				795C551222CBA5690043DC14 /* NutrAI */,
 				795C552722CBA56A0043DC14 /* NutrAITests */,
 				795C551122CBA5690043DC14 /* Products */,
@@ -144,6 +159,7 @@
 		795C551222CBA5690043DC14 /* NutrAI */ = {
 			isa = PBXGroup;
 			children = (
+				77B92CDF22CCF485007B51ED /* Helper */,
 				77B92CDE22CCE812007B51ED /* Service */,
 				79E269B722CBDC65000C62D0 /* Protocol */,
 				795C553A22CBD4CD0043DC14 /* Extension */,
@@ -175,6 +191,7 @@
 				7947250F22CD3A6700524EA5 /* ChooseMealView.swift */,
 				775F514A22CE00C400ACF4C0 /* MealIdentifierView.swift */,
 				775F514622CE000500ACF4C0 /* CustomButton.swift */,
+				775F515422CE24A800ACF4C0 /* Alert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +435,7 @@
 				7947250A22CD209000524EA5 /* TheMealDBManager.swift in Sources */,
 				795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */,
 				775F514F22CE086800ACF4C0 /* MealIdentifierController.swift in Sources */,
+				77B92CE122CCF490007B51ED /* CoreMLHelper.swift in Sources */,
 				79E269B422CBD517000C62D0 /* UIViewComponents+Extension.swift in Sources */,
 				79E269C122CBE5B6000C62D0 /* Meal.swift in Sources */,
 				795C553722CBA6300043DC14 /* MealsListController.swift in Sources */,
@@ -425,6 +443,7 @@
 				79E269C322CBEAAB000C62D0 /* MealsStatsController.swift in Sources */,
 				7947251022CD3A6700524EA5 /* ChooseMealView.swift in Sources */,
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
+				775F514522CDFD2000ACF4C0 /* Food101.mlmodel in Sources */,
 				7925806522CC600700415C72 /* User.swift in Sources */,
 				7947250822CD1F4600524EA5 /* TipsMealsController.swift in Sources */,
 				775F514D22CE082400ACF4C0 /* HasCustomView.swift in Sources */,
@@ -434,6 +453,7 @@
 				79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */,
 				77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */,
 				79E269C522CBF0CD000C62D0 /* Constraints+Extension.swift in Sources */,
+				775F515522CE24A800ACF4C0 /* Alert.swift in Sources */,
 				79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */,
 				7947250E22CD38D500524EA5 /* BaseCollectionController.swift in Sources */,
 				775F514722CE000500ACF4C0 /* CustomButton.swift in Sources */,

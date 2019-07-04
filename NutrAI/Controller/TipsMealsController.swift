@@ -30,7 +30,7 @@ extension TipsMealsController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mealsDB.count
     }
-d
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MealsListCell.self)
         cell.nameMeal.text = mealsDB[indexPath.row].strMeal

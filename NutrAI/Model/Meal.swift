@@ -10,14 +10,12 @@ import Foundation
 
 struct Meal: Decodable {
     let name: String
-    let calorie: Double
+    let imageData: Data
     let timestamp: Date
-    let imageUrl: String
     
-    init(name: String, calorie: Double, imageUrl: String) {
+    init(name: String, imageData: Data) {
         self.name = name
-        self.calorie = calorie
-        self.imageUrl = imageUrl
-        timestamp = Date()
+        self.imageData = imageData
+        self.timestamp = Date()
     }
 }
