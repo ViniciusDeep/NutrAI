@@ -24,8 +24,8 @@ class TipsMealsController: UITableViewController {
 
 extension TipsMealsController {
     fileprivate func setupTableView() {
-            self.tableView.register(cellType: MealsListCell.self)
-        }
+        self.tableView.register(cellType: MealsListCell.self)
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mealsDB.count

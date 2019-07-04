@@ -39,6 +39,11 @@ extension MealIdentifierController: MealIdentifierViewDelegate {
             print("Meal not loaded")
             return
         }
+        
+      
+        
+        
+        dismiss(animated: true)
     }
     
     func cancelButtonDidClick() {
@@ -96,6 +101,7 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
         
         // Assign new resizable image here
         customView.setMealImage(image)
+        customView.hideImageViewDescriptionLabel()
         
         // Get model prediction
         guard let prediction = try? model.prediction(image: pixelBuffer) else {
@@ -110,7 +116,15 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
             print("Could not load image")
             return
         }
-        meal = Meal(name: prediction.classLabel, imageData: imageData)
+        
+        let coreStack = CoreDao<Meal>(with: "NutriAI-Data")
+        meal = coreStack.new()
+        meal.name = prediction.classLabel
+        meal.imageData = imageData
+        coreStack.insert(object: meal)
+        
+        customView.setMealName(name: meal.name ?? "")
+        
         
     }
     

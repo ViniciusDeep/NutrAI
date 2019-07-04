@@ -12,14 +12,22 @@ class MealsListController: UITableViewController {
     
     let schedules = [Schedule(name: "BreakFast", imageNamed: "breakfast"),Schedule(name: "Lunch", imageNamed: "lunch"),Schedule(name: "Dinner", imageNamed: "dinner")]
     
+    var meals: [Meal]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMealButtonClicked))
         setupTableView()
     }
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let coreStack = CoreDao<Meal>(with: "NutriAI-Data")
+        meals = coreStack.fetchAll()
+        tableView.reloadData()
+    }
+    
 }
-
-// MARK: - Actions
 
 extension MealsListController {
     @objc func addMealButtonClicked(_ sender: Any) {
@@ -43,7 +51,7 @@ extension MealsListController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return meals?.count ?? 0
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,6 +60,8 @@ extension MealsListController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MealsListCell.self)
+        cell.nameMeal.text = meals?[indexPath.row].name ?? ""
+        cell.imageMeal.image = UIImage(data: meals?[indexPath.row].imageData ?? Data())
         return cell
     }
 }

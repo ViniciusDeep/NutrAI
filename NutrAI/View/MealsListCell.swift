@@ -12,7 +12,7 @@ class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
     
     var meal: Meal! {
         didSet {
-            imageMeal.image =  UIImage(data: meal.imageData)
+            imageMeal.image =  UIImage(data: meal?.imageData as! Data)
             nameMeal.text = meal.name
         }
     }

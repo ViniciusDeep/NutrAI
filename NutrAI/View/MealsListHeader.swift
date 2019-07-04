@@ -21,7 +21,7 @@ class MealsListHeader: UIView, ConfigurableView {
     lazy var nameSection = UILabel(text: "Breakfast", font: UIFont.init(name: "Futura", size: 16), textColor: .black)
     
     lazy var iconSection: UIImageView = {
-       let imageView = UIImageView(image: UIImage(named: "toaster"))
+        let imageView = UIImageView(image: UIImage(named: "toaster"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
