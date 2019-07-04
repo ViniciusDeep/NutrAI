@@ -25,12 +25,15 @@ final class MealIdentifierController: UIViewController, HasCustomView {
 
 // MARK: - Actions
 extension MealIdentifierController: MealIdentifierViewDelegate {
-    
     func addButtonDidClick() {
         
     }
     
     func cancelButtonDidClick() {
+        
+    }
+    
+    func photoImageViewDidClick() {
         
     }
 }
