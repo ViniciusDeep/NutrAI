@@ -21,9 +21,18 @@ class MealIdentifierView: UIView, ConfigurableView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .lightGray
         imageView.isUserInteractionEnabled = true
+        imageView.layer.cornerRadius = 8
+        imageView.clipsToBounds = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(photoImageViewClicked))
         imageView.addGestureRecognizer(tapGesture)
         return imageView
+    }()
+    
+    lazy var imageViewDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Choose a photo"
+        return label
     }()
     
     lazy var mealNameTextField: UITextField = {
@@ -62,6 +71,8 @@ class MealIdentifierView: UIView, ConfigurableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.addGestureRecognizer(tapGesture)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,6 +86,7 @@ class MealIdentifierView: UIView, ConfigurableView {
     
     func buildViewHierarchy() {
         addSubviews([mealImageView, mealNameTextField, buttonsStackView])
+        mealImageView.addSubview(imageViewDescriptionLabel)
     }
     
     func setupConstraints() {
@@ -84,6 +96,12 @@ class MealIdentifierView: UIView, ConfigurableView {
             mealImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             mealImageView.widthAnchor.constraint(equalToConstant: 200),
             mealImageView.heightAnchor.constraint(equalTo: mealImageView.widthAnchor)
+        ])
+        
+        // imageViewDescriptionLabel constraints
+        NSLayoutConstraint.activate([
+            imageViewDescriptionLabel.centerXAnchor.constraint(equalTo: mealImageView.centerXAnchor),
+            imageViewDescriptionLabel.centerYAnchor.constraint(equalTo: mealImageView.centerYAnchor)
         ])
         
         // mealNameTextField constraints
@@ -129,11 +147,19 @@ extension MealIdentifierView {
         delegate?.photoImageViewDidClick()
     }
     
+    @objc func dismissKeyboard(_ gesture: UITapGestureRecognizer) {
+        self.endEditing(true)
+    }
+    
     func setMealImage(_ image: UIImage) {
         mealImageView.image = image
     }
     
-    func setMealName() {
-        
+    func setMealName(name: String) {
+        mealNameTextField.text = name
+    }
+    
+    func hideImageViewDescriptionLabel() {
+        imageViewDescriptionLabel.isHidden = true
     }
 }

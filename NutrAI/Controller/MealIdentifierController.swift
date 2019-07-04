@@ -39,6 +39,7 @@ extension MealIdentifierController: MealIdentifierViewDelegate {
             print("Meal not loaded")
             return
         }
+        dismiss(animated: true)
     }
     
     func cancelButtonDidClick() {
@@ -96,6 +97,7 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
         
         // Assign new resizable image here
         customView.setMealImage(image)
+        customView.hideImageViewDescriptionLabel()
         
         // Get model prediction
         guard let prediction = try? model.prediction(image: pixelBuffer) else {
@@ -112,6 +114,7 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
         }
         meal = Meal(name: prediction.classLabel, imageData: imageData)
         
+        customView.setMealName(name: meal.name)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
