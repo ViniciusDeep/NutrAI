@@ -39,10 +39,6 @@ extension MealIdentifierController: MealIdentifierViewDelegate {
             print("Meal not loaded")
             return
         }
-        
-      
-        
-        
         dismiss(animated: true)
     }
     
@@ -121,11 +117,14 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
         meal = coreStack.new()
         meal.name = prediction.classLabel
         meal.imageData = imageData
+        meal.timestamp = Int32(TimeManager.getCurrentTimer()) ?? 0
+        meal.setSchedule()
         coreStack.insert(object: meal)
         
         customView.setMealName(name: meal.name ?? "")
         
         
+       
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

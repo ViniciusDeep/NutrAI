@@ -29,6 +29,7 @@
 		795C553722CBA6300043DC14 /* MealsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553622CBA6300043DC14 /* MealsListController.swift */; };
 		795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C553822CBCD700043DC14 /* MealsListCell.swift */; };
 		7969A5B722CC5B71004BE151 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7969A5B622CC5B71004BE151 /* Schedule.swift */; };
+		796C287C22CE951B0068E863 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C287B22CE951B0068E863 /* TimeManager.swift */; };
 		79C2F51C22CE3B9100C3636F /* Food101.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79C2F51B22CE3B9100C3636F /* Food101.mlmodel */; };
 		79C2F52C22CE3CAE00C3636F /* NutriAI-Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79C2F52A22CE3CAE00C3636F /* NutriAI-Data.xcdatamodeld */; };
 		79C2F52F22CE3D4000C3636F /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C2F52D22CE3D4000C3636F /* Meal+CoreDataClass.swift */; };
@@ -88,6 +89,7 @@
 		795C553622CBA6300043DC14 /* MealsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListController.swift; sourceTree = "<group>"; };
 		795C553822CBCD700043DC14 /* MealsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListCell.swift; sourceTree = "<group>"; };
 		7969A5B622CC5B71004BE151 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		796C287B22CE951B0068E863 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		79C2F51B22CE3B9100C3636F /* Food101.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Food101.mlmodel; path = ../../Downloads/Food101.mlmodel; sourceTree = "<group>"; };
 		79C2F52B22CE3CAE00C3636F /* NutriAI-Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NutriAI-Data.xcdatamodel"; sourceTree = "<group>"; };
 		79C2F52D22CE3D4000C3636F /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Meal+CoreDataClass.swift"; path = "/Users/viniciusmangueira/Desktop/NutrAI/NutrAI/Model/Meal+CoreDataClass.swift"; sourceTree = "<absolute>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				77B92CE022CCF490007B51ED /* CoreMLHelper.swift */,
+				796C287B22CE951B0068E863 /* TimeManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
 				7925806522CC600700415C72 /* User.swift in Sources */,
 				7947250822CD1F4600524EA5 /* TipsMealsController.swift in Sources */,
+				796C287C22CE951B0068E863 /* TimeManager.swift in Sources */,
 				775F514D22CE082400ACF4C0 /* HasCustomView.swift in Sources */,
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
 				79C2F53822CE40DC00C3636F /* NSManagedObject+Extension.swift in Sources */,

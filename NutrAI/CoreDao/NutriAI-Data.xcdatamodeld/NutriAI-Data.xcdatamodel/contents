@@ -3,9 +3,10 @@
     <entity name="Meal" representedClassName="Meal" syncable="YES">
         <attribute name="imageData" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="schedule" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Meal" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Meal" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
