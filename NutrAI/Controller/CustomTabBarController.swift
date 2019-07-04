@@ -20,6 +20,7 @@ class CustomTabBarController: UITabBarController {
         viewControllers = [
             createNav(viewController: MealsListController(), title: "NutrAI", imageNamed: "tab1"),
             createNav(viewController: MealsStatsController(), title: "Stats", imageNamed: "tab2"),
+            createNav(viewController: TipsMealsController(), title: "Fine dining", imageNamed: "tab3")
         ]
     }
     fileprivate func createNav(viewController: UIViewController, title: String, imageNamed: String) -> UINavigationController {

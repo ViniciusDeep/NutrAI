@@ -7,6 +7,8 @@ target 'NutrAI' do
 
   # Pods for NutrAI
   pod 'Charts'
+  pod 'SDWebImage', '~> 5.0'
+
   target 'NutrAITests' do
     inherit! :search_paths
     # Pods for testing
