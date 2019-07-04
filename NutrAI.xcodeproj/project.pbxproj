@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775F514722CE000500ACF4C0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514622CE000500ACF4C0 /* CustomButton.swift */; };
+		775F514922CE003A00ACF4C0 /* UIButton+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514822CE003A00ACF4C0 /* UIButton+Animate.swift */; };
+		775F514B22CE00C400ACF4C0 /* MealIdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514A22CE00C400ACF4C0 /* MealIdentifierView.swift */; };
+		775F514D22CE082400ACF4C0 /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514C22CE082400ACF4C0 /* HasCustomView.swift */; };
+		775F514F22CE086800ACF4C0 /* MealIdentifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F514E22CE086800ACF4C0 /* MealIdentifierController.swift */; };
 		77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B92CDA22CCE2C9007B51ED /* NetworkService.swift */; };
 		7925806522CC600700415C72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7925806422CC600700415C72 /* User.swift */; };
 		7947250822CD1F4600524EA5 /* TipsMealsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947250722CD1F4600524EA5 /* TipsMealsController.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		775F514622CE000500ACF4C0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		775F514822CE003A00ACF4C0 /* UIButton+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Animate.swift"; sourceTree = "<group>"; };
+		775F514A22CE00C400ACF4C0 /* MealIdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIdentifierView.swift; sourceTree = "<group>"; };
+		775F514C22CE082400ACF4C0 /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
+		775F514E22CE086800ACF4C0 /* MealIdentifierController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIdentifierController.swift; sourceTree = "<group>"; };
 		77B92CDA22CCE2C9007B51ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		77F075A6599E6A8E84C6DA23 /* Pods-NutrAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutrAI.release.xcconfig"; path = "Target Support Files/Pods-NutrAI/Pods-NutrAI.release.xcconfig"; sourceTree = "<group>"; };
 		789E347E14E5E6CE624BB020 /* Pods_NutrAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutrAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +173,8 @@
 				795C553822CBCD700043DC14 /* MealsListCell.swift */,
 				79E269BE22CBDF12000C62D0 /* MealsListHeader.swift */,
 				7947250F22CD3A6700524EA5 /* ChooseMealView.swift */,
+				775F514A22CE00C400ACF4C0 /* MealIdentifierView.swift */,
+				775F514622CE000500ACF4C0 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 				7947250722CD1F4600524EA5 /* TipsMealsController.swift */,
 				7947250B22CD38A300524EA5 /* ChooseMealController.swift */,
 				7947250D22CD38D500524EA5 /* BaseCollectionController.swift */,
+				775F514E22CE086800ACF4C0 /* MealIdentifierController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +210,8 @@
 				79E269B522CBD9FA000C62D0 /* UIView+Extension.swift */,
 				79E269BC22CBDD7D000C62D0 /* UITableView+Reusable.swift */,
 				79E269C422CBF0CD000C62D0 /* Constraints+Extension.swift */,
+				775F514822CE003A00ACF4C0 /* UIButton+Animate.swift */,
+				775F514C22CE082400ACF4C0 /* HasCustomView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -397,10 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775F514B22CE00C400ACF4C0 /* MealIdentifierView.swift in Sources */,
 				79E269B622CBD9FA000C62D0 /* UIView+Extension.swift in Sources */,
 				79E269BF22CBDF12000C62D0 /* MealsListHeader.swift in Sources */,
 				7947250A22CD209000524EA5 /* TheMealDBManager.swift in Sources */,
 				795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */,
+				775F514F22CE086800ACF4C0 /* MealIdentifierController.swift in Sources */,
 				79E269B422CBD517000C62D0 /* UIViewComponents+Extension.swift in Sources */,
 				79E269C122CBE5B6000C62D0 /* Meal.swift in Sources */,
 				795C553722CBA6300043DC14 /* MealsListController.swift in Sources */,
@@ -410,11 +427,16 @@
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
 				7925806522CC600700415C72 /* User.swift in Sources */,
 				7947250822CD1F4600524EA5 /* TipsMealsController.swift in Sources */,
+				775F514D22CE082400ACF4C0 /* HasCustomView.swift in Sources */,
+				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
+				7925806522CC600700415C72 /* User.swift in Sources */,
+				775F514922CE003A00ACF4C0 /* UIButton+Animate.swift in Sources */,
 				79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */,
 				77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */,
 				79E269C522CBF0CD000C62D0 /* Constraints+Extension.swift in Sources */,
 				79E269B922CBDC72000C62D0 /* ConfigurableView.swift in Sources */,
 				7947250E22CD38D500524EA5 /* BaseCollectionController.swift in Sources */,
+				775F514722CE000500ACF4C0 /* CustomButton.swift in Sources */,
 				795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */,
 				7969A5B722CC5B71004BE151 /* Schedule.swift in Sources */,
 				795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */,
