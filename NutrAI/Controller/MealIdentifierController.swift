@@ -34,8 +34,11 @@ final class MealIdentifierController: UIViewController, HasCustomView {
 
 // MARK: - Actions
 extension MealIdentifierController: MealIdentifierViewDelegate {
-    func addButtonDidClick(meal: Meal) {
-        
+    func addButtonDidClick() {
+        guard let meal = meal else {
+            print("Meal not loaded")
+            return
+        }
     }
     
     func cancelButtonDidClick() {
@@ -108,6 +111,7 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
             return
         }
         meal = Meal(name: prediction.classLabel, imageData: imageData)
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

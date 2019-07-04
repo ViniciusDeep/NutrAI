@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MealIdentifierViewDelegate: class {
-    func addButtonDidClick(meal: Meal)
+    func addButtonDidClick()
     func cancelButtonDidClick()
     func photoImageViewDidClick()
 }
@@ -131,5 +131,9 @@ extension MealIdentifierView {
     
     func setMealImage(_ image: UIImage) {
         mealImageView.image = image
+    }
+    
+    func setMealName() {
+        
     }
 }
