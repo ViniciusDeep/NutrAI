@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775F514522CDFD2000ACF4C0 /* Food101.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 775F514422CDFD2000ACF4C0 /* Food101.mlmodel */; };
 		77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B92CDA22CCE2C9007B51ED /* NetworkService.swift */; };
+		77B92CE122CCF490007B51ED /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B92CE022CCF490007B51ED /* CoreMLHelper.swift */; };
 		7925806522CC600700415C72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7925806422CC600700415C72 /* User.swift */; };
 		795C551422CBA5690043DC14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C551322CBA5690043DC14 /* AppDelegate.swift */; };
 		795C551622CBA5690043DC14 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C551522CBA5690043DC14 /* CustomTabBarController.swift */; };
@@ -41,7 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		775F514422CDFD2000ACF4C0 /* Food101.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Food101.mlmodel; path = ../Food101.mlmodel; sourceTree = "<group>"; };
 		77B92CDA22CCE2C9007B51ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		77B92CE022CCF490007B51ED /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
 		77F075A6599E6A8E84C6DA23 /* Pods-NutrAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutrAI.release.xcconfig"; path = "Target Support Files/Pods-NutrAI/Pods-NutrAI.release.xcconfig"; sourceTree = "<group>"; };
 		789E347E14E5E6CE624BB020 /* Pods_NutrAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutrAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7925806422CC600700415C72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -100,9 +104,18 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		77B92CDF22CCF485007B51ED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				77B92CE022CCF490007B51ED /* CoreMLHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		795C550722CBA5690043DC14 = {
 			isa = PBXGroup;
 			children = (
+				775F514422CDFD2000ACF4C0 /* Food101.mlmodel */,
 				795C551222CBA5690043DC14 /* NutrAI */,
 				795C552722CBA56A0043DC14 /* NutrAITests */,
 				795C551122CBA5690043DC14 /* Products */,
@@ -123,6 +136,7 @@
 		795C551222CBA5690043DC14 /* NutrAI */ = {
 			isa = PBXGroup;
 			children = (
+				77B92CDF22CCF485007B51ED /* Helper */,
 				77B92CDE22CCE812007B51ED /* Service */,
 				79E269B722CBDC65000C62D0 /* Protocol */,
 				795C553A22CBD4CD0043DC14 /* Extension */,
@@ -385,11 +399,13 @@
 				79E269B622CBD9FA000C62D0 /* UIView+Extension.swift in Sources */,
 				79E269BF22CBDF12000C62D0 /* MealsListHeader.swift in Sources */,
 				795C553922CBCD700043DC14 /* MealsListCell.swift in Sources */,
+				77B92CE122CCF490007B51ED /* CoreMLHelper.swift in Sources */,
 				79E269B422CBD517000C62D0 /* UIViewComponents+Extension.swift in Sources */,
 				79E269C122CBE5B6000C62D0 /* Meal.swift in Sources */,
 				795C553722CBA6300043DC14 /* MealsListController.swift in Sources */,
 				79E269C322CBEAAB000C62D0 /* MealsStatsController.swift in Sources */,
 				79E269BD22CBDD7D000C62D0 /* UITableView+Reusable.swift in Sources */,
+				775F514522CDFD2000ACF4C0 /* Food101.mlmodel in Sources */,
 				7925806522CC600700415C72 /* User.swift in Sources */,
 				79E269BB22CBDD19000C62D0 /* Reusable.swift in Sources */,
 				77B92CDB22CCE2C9007B51ED /* NetworkService.swift in Sources */,
