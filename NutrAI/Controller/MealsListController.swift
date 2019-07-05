@@ -14,6 +14,8 @@ class MealsListController: UITableViewController {
     
     var meals: [Meal]?
     
+    fileprivate let coreStack = CoreDao<Meal>(with: "NutriAI-Data")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMealButtonClicked))
@@ -22,7 +24,6 @@ class MealsListController: UITableViewController {
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let coreStack = CoreDao<Meal>(with: "NutriAI-Data")
         meals = coreStack.fetchAll()
         tableView.reloadData()
     }
@@ -60,7 +61,8 @@ extension MealsListController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MealsListCell.self)
-        cell.nameMeal.text = meals?[indexPath.row].name ?? ""
+        meals = coreStack.fetchAll()
+        cell.nameMeal.text = meals?[indexPath.row].name ?? "No Food"
         cell.imageMeal.image = UIImage(data: meals?[indexPath.row].imageData ?? Data())
         return cell
     }

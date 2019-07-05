@@ -22,7 +22,7 @@ extension UIImageView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = 50
         image.clipsToBounds = true
-        image.layer.shadowOffset = CGSize(width: 5, height: 5)
+        image.layer.shadowOffset = CGSize(width: 1, height: 1)
         image.layer.shadowRadius = 4
         image.layer.shadowColor = UIColor.black.cgColor
         image.layer.shadowOpacity = 1

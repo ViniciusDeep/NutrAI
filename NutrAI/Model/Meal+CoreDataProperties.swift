@@ -22,7 +22,7 @@ extension Meal {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var imageData: Data?
+    @NSManaged public var imageData: Data
     @NSManaged public var timestamp: Int32
     @NSManaged public var schedule: String?
     

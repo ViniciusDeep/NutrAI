@@ -12,7 +12,7 @@ class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
     
     var meal: Meal! {
         didSet {
-            imageMeal.image =  UIImage(data: meal?.imageData as! Data)
+            imageMeal.image =  UIImage(data: meal.imageData)
             nameMeal.text = meal.name
         }
     }
@@ -33,6 +33,7 @@ class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func buildViewHierarchy() {
         addSubview(imageMeal)
