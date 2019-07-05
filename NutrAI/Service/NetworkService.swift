@@ -14,14 +14,12 @@ final class NetworkService {
             print("Could not load url")
            return
         }
-        
         let session = URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard error == nil,
                 let data = data else {
                 print("An error has occured while loading data")
                 return
             }
-            
             do {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {

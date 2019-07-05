@@ -21,7 +21,7 @@ class MealsListHeader: UIView, ConfigurableView {
     lazy var nameSection = UILabel(text: "Breakfast", font: UIFont.init(name: "Futura", size: 16), textColor: .black)
     
     lazy var iconSection: UIImageView = {
-       let imageView = UIImageView(image: UIImage(named: "toaster"))
+        let imageView = UIImageView(image: UIImage(named: "toaster"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -29,7 +29,7 @@ class MealsListHeader: UIView, ConfigurableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .orange
+        self.backgroundColor = UIColor(displayP3Red: 244/255, green: 244/255, blue: 244/255, alpha: 1)
         buildViewHierarchy()
         setupConstraints()
     }
@@ -48,16 +48,14 @@ class MealsListHeader: UIView, ConfigurableView {
             self.iconSection.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             self.iconSection.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.iconSection.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            
-            ])
+        ])
         
         NSLayoutConstraint.activate([
             self.nameSection.leadingAnchor.constraint(equalTo: self.iconSection.trailingAnchor, constant: 10),
             self.nameSection.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.nameSection.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            ])
+        ])
     }
-    
-    
+
 }
 

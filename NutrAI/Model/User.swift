@@ -14,10 +14,10 @@ struct User {
     var weight: Double
     var calorieNeed: Double
     
-    
     mutating func calculatedCalorie() {
         if age >= 18 && age <= 35 {
             self.calorieNeed = ((weight * 15.3) + 679) * 4
         }
     }
 }
+

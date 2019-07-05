@@ -112,9 +112,16 @@ extension MealIdentifierController: UIImagePickerControllerDelegate, UINavigatio
             print("Could not load image")
             return
         }
-        meal = Meal(name: prediction.classLabel, imageData: imageData)
         
-        customView.setMealName(name: meal.name)
+        let coreStack = CoreDao<Meal>(with: "NutriAI-Data")
+        meal = coreStack.new()
+        meal.name = prediction.classLabel
+        meal.imageData = imageData
+        meal.timestamp = Int32(TimeManager.getCurrentTimer()) ?? 0
+        meal.setSchedule()
+        coreStack.insert(object: meal)
+        
+        customView.setMealName(name: meal.name ?? "")
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

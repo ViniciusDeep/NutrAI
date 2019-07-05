@@ -96,7 +96,13 @@ class MealIdentifierView: UIView, ConfigurableView {
             mealImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             mealImageView.widthAnchor.constraint(equalToConstant: 200),
             mealImageView.heightAnchor.constraint(equalTo: mealImageView.widthAnchor)
-        ])
+            ])
+        
+        // imageViewDescriptionLabel constraints
+        NSLayoutConstraint.activate([
+            imageViewDescriptionLabel.centerXAnchor.constraint(equalTo: mealImageView.centerXAnchor),
+            imageViewDescriptionLabel.centerYAnchor.constraint(equalTo: mealImageView.centerYAnchor)
+            ])
         
         // imageViewDescriptionLabel constraints
         NSLayoutConstraint.activate([
@@ -109,26 +115,26 @@ class MealIdentifierView: UIView, ConfigurableView {
             mealNameTextField.topAnchor.constraint(equalTo: mealImageView.bottomAnchor, constant: 40),
             mealNameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             mealNameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40)
-        ])
+            ])
         
         // buttonsStackView constrains
         NSLayoutConstraint.activate([
             buttonsStackView.topAnchor.constraint(equalTo: mealNameTextField.bottomAnchor, constant: 80),
             buttonsStackView.leadingAnchor.constraint(equalTo: mealNameTextField.leadingAnchor),
             buttonsStackView.trailingAnchor.constraint(equalTo: mealNameTextField.trailingAnchor)
-        ])
+            ])
         
         // addButton constraints
         NSLayoutConstraint.activate([
             addButon.widthAnchor.constraint(equalToConstant: 100),
             addButon.heightAnchor.constraint(equalToConstant: 40),
-        ])
+            ])
         
         // cancelButton constraints
         NSLayoutConstraint.activate([
             cancelButton.widthAnchor.constraint(equalTo: addButon.widthAnchor),
             cancelButton.heightAnchor.constraint(equalTo: addButon.heightAnchor)
-        ])
+            ])
     }
 }
 

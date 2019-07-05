@@ -8,14 +8,7 @@
 
 import UIKit
 
-class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
-    
-    var meal: Meal! {
-        didSet {
-            imageMeal.image =  UIImage(data: meal.imageData)
-            nameMeal.text = meal.name
-        }
-    }
+class MealsListCell: UITableViewCell, ConfigurableView, Reusable {
     
     lazy var imageMeal = UIImageView().roundedImage(nameImage: "meal")
     
@@ -32,6 +25,11 @@ class MealsListCell: UITableViewCell, ConfigurableView, Reusable{
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupCell(meal: Meal) {
+        imageMeal.image =  UIImage(data: meal.imageData)
+        nameMeal.text = meal.name
     }
     
     func buildViewHierarchy() {

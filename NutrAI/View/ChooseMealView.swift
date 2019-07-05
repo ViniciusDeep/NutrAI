@@ -32,5 +32,5 @@ class ChooseMealView: UICollectionViewCell {
     func setupConstraints() {
         self.imageBanner.centerInSuperview()
     }
-
+    
 }
